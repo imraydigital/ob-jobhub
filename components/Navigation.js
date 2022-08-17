@@ -9,7 +9,7 @@ const Navigation = () => {
     <div className={styles.navContainer}>
       <Link href='/jobs'>
         <a>
-          <Image src='/images/ob-logo-white.png' alt ="logo"/>
+          <Image src='/images/ob-logo-white.png' alt ="logo" width="210" height="80" />
         </a>
       </Link>
       <nav>
