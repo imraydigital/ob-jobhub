@@ -1,0 +1,44 @@
+.filterBarcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    margin: 50px 0px;
+    position: relative;
+}
+
+
+
+.filterBarcontainer>*{
+    margin-left: 10px;
+}
+
+.filterBarcontainer>p {
+    color: #333;
+    font-weight: bold;
+}
+
+.filterBarcontainer>select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    /*background-color: #01BDA6;*/
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    -webkit-appearance:none;
+}
+
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background-image: url('/images/arrow-downward.svg');
+    background-repeat: no-repeat;
+    background-position: 98%;
+    color: #FFF;
+ }

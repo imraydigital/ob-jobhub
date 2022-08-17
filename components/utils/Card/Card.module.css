@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+    height: 368px;
+    flex-basis: 275px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 13px 0 rgb(0 0 0 / 8%);
+    transition: all 200ms ease-in;
+}
+
+.card__bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: inherit;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}

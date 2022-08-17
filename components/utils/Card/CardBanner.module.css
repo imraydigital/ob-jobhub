@@ -1,0 +1,18 @@
+.cardBanner {
+    min-width: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #01BDA6;
+    border-radius: 10px;
+    position: absolute;
+    height: 30px;
+    transform: translate(10px, -25px);
+}
+
+.cardBanner>p {
+    color: #FFF;
+    padding: 8px 11.25px;
+    font-size: 14px;
+    font-weight: 600;
+}

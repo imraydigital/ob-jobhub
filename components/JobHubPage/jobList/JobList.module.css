@@ -1,0 +1,15 @@
+.jobListContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.jobListContainer>a {
+    display: flex;
+    height: 368px;
+    flex-basis: 275px;
+}

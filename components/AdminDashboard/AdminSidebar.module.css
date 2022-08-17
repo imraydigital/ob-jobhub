@@ -1,0 +1,21 @@
+.adminSidebar__container {
+    position: absolute;
+    height: 400px;
+    width: 60px;
+    background-color: #27262C;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.adminSidebar__container>ul {
+    width: 100%;
+}
+
+.adminSidebar__container>ul>li button {
+    background: transparent;
+    border: none;
+}

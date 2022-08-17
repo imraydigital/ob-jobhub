@@ -1,0 +1,28 @@
+.cardInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+    transition: background-color 200ms ease-in;
+}
+
+.cardInfo>h3 {
+    padding: 20px;
+    color: #FFF;
+    font-family: Muli;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.cardInfo:hover {
+    background-color: #FFF;
+}
+
+.cardInfo:hover>h3 {
+    color: #01BDA6;
+}

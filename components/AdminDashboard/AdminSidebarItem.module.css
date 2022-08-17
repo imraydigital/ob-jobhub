@@ -1,0 +1,26 @@
+.item {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.item button {
+    cursor: pointer;
+}
+
+.item svg{
+    height: 24px;
+    fill: #FFF;
+}
+
+.item:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.item.active {
+    background-color: rgba(255,255,255,0.4);
+}

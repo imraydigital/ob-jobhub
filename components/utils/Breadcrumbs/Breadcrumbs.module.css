@@ -1,0 +1,20 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.breadcrumbs>li {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}
+
+.breadcrumbs>li:last-of-type {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.breadcrumbs>* {
+    margin-right: 10px;
+}
