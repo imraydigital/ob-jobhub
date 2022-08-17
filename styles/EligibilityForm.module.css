@@ -161,6 +161,7 @@
 .efc>form input[type="checkbox"]{
     accent-color: #F27718;
     cursor: pointer;
+    -webkit-transform: scale(1.25, 1.25);
 }
 
 .efc__input__cb {
