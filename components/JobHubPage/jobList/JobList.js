@@ -13,9 +13,9 @@ const JobList = ({ data }) => {
 
       {data.map((item) => {
         return (
-          <Link href={`/jobs/${item._id}`}>
+          <Link href={`/jobs/${item._id}`} key={item._id}>
             <a>
-              <Card banner key={item._id} title={`${item.jobTitle} - ${item.location}`} text={item.category} image={item.image}/>
+              <Card banner title={`${item.jobTitle} - ${item.location}`} text={item.category} image={item.image}/>
             </a>
           </Link>
         )

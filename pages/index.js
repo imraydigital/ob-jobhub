@@ -51,7 +51,7 @@ export default function Home() {
         </h1>
         <h2 className={styles.subtitle}>Job Hub</h2>
         <p className={styles.description}>
-          Click 'Get Started' to find your dream job with us today!
+          Click &apos;Get Started&apos; to find your dream job with us today!
         </p>
         <Link href={'/jobs'}><button className={styles.getStartedBtn}>Get Started</button></Link>
       </main>
