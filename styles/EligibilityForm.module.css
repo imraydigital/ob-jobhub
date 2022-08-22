@@ -159,9 +159,12 @@
 }
 
 .efc>form input[type="checkbox"]{
+    display: inline-block;
     accent-color: #F27718;
     cursor: pointer;
-    -webkit-transform: scale(1.25, 1.25);
+    min-width: 50px;
+    min-height: 50px;
+    -webkit-transform: scale(2.1, 2.1) !important;
 }
 
 .efc__input__cb {

@@ -29,6 +29,15 @@ const handler = async (req, res) => {
         res.json({message: 'Your application has been successfully submitted!'});
     }
 
+    if (req.method === 'GET') {
+        const client = await MongoClient.connect('mongodb+srv://liam:imray4672920110917000548@jobhub.1eizs69.mongodb.net/?retryWrites=true&w=majority',
+        );
+        const db = client.db();
+        const applications = await db.collection('applications').find().toArray();
+        res.json(applications);
+        client.close();
+    }
+
 }
 
 export default handler;

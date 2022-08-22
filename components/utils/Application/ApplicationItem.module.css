@@ -1,0 +1,55 @@
+.applicationItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0px;
+    box-shadow: 0 0px 10px 5px rgb(0, 0, 0, .05);
+    border-radius: 5px;
+}
+
+.applicantContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.applicantContainer__name {
+    display: flex;
+}
+
+.applicantContainer__name>p{
+    margin: 0px 2px;
+    font-weight: 600;
+}
+
+.applicantContainer__title>p{
+    color: #E18226;
+    font-size: 1rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
+}
+
+.applicantContainer__button>button {
+    height: 56px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    transition: all ease-in 300ms;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #00bda6;
+    color: #FFF;
+}
+
+.applicantContainer__button>button:hover {
+    transform: scale(1.05);
+}
