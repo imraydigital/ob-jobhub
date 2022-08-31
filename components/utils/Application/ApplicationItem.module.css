@@ -53,3 +53,12 @@
 .applicantContainer__button>button:hover {
     transform: scale(1.05);
 }
+
+.disabled {
+    background-color: #e1e1e1 !important;
+    pointer-events: none;
+}
+
+.disabled:hover {
+    cursor: not-allowed !important;
+}

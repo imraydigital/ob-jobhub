@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ApplicationsItem = ({ clickHandler }) => {
+const ApplicationsItem = ({ switchRouteHandler }) => {
 	return (
 		<button onClick={() => {
-			clickHandler(() => {
+			switchRouteHandler(() => {
 				return {
 					home: false,
 					jobs: false,

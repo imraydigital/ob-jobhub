@@ -7,7 +7,7 @@ const Stats = () => {
       <h6>Welcome to Orangebox Job Hub Admin Area</h6>
       <h1>View Insights</h1>
       <div className={styles.container}>
-        Content goes here
+        Insights will appear here...
       </div>
     </Fragment>
   )

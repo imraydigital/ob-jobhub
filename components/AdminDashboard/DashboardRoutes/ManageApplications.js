@@ -41,12 +41,11 @@ const Applications = () => {
                                     <p>{application.lastName}</p>
                                 </div>
                             </div>
-                            <div className={appStyles.applicantContainer__button}>
-                                <button>View Application</button>
+                            <div className={`${appStyles.applicantContainer__button}`}>
+                                <button className={appStyles.disabled}>View Application</button>
                             </div>
                         </ApplicationItem>
                     )
-
                 })}
             </div>
         </Fragment>

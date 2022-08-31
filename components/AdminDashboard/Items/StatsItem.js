@@ -1,10 +1,10 @@
 import React from 'react'
 
-const StatsItem = ({ clickHandler }) => {
+const StatsItem = ({ switchRouteHandler }) => {
 
 	return (
 		<button onClick={()=>{
-			clickHandler(()=>{
+			switchRouteHandler(()=>{
 				return {
 					home: false,
 					jobs: false,

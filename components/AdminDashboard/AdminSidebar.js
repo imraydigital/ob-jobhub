@@ -12,10 +12,10 @@ const AdminSidebar = ({switchRoute}) => {
   return (
     <div className={styles.adminSidebar__container}>
         <ul>
-            <AdminSidebarItem item={<HomeItem clickHandler={switchRoute} />} active />
-            <AdminSidebarItem item={<JobsItem clickHandler={switchRoute} />}  />
-            <AdminSidebarItem item={<ApplicationsItem clickHandler={switchRoute} />} />
-            <AdminSidebarItem item={<StatsItem clickHandler={switchRoute} />}/>
+            <AdminSidebarItem item={<HomeItem switchRouteHandler={switchRoute} />} />
+            <AdminSidebarItem item={<JobsItem switchRouteHandler={switchRoute} />}  />
+            <AdminSidebarItem item={<ApplicationsItem switchRouteHandler={switchRoute} />} />
+            <AdminSidebarItem item={<StatsItem switchRouteHandler={switchRoute} />}/>
         </ul>
     </div>
   )

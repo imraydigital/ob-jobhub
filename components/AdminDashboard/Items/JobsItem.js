@@ -1,11 +1,11 @@
 import React from 'react'
 
-const JobsItem = ({ clickHandler }) => {
+const JobsItem = ({ switchRouteHandler }) => {
 
   
   return (
     <button onClick={() => {
-      clickHandler(() => {
+      switchRouteHandler(() => {
         return {
           home: false,
           jobs: true,

@@ -36,7 +36,7 @@
     margin: 20px 0px;
 }
 
-.authFormContainer>form>input {
+.authFormContainer>form>.pinContainer>input {
     height: 100px;
     width: 100px;
     margin: 0px 5px;
@@ -46,4 +46,34 @@
     background-color: #f1f1f1;
     font-size: 40px;
     text-align: center;
+}
+
+.pinContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.buttonContainer>button {
+    height: 56px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    transition: all ease-in 300ms;
+    font-weight: 400;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    background-color: #00bda6;
+    color: #FFF !important;
 }
