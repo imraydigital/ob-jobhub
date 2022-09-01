@@ -23,7 +23,7 @@ const ManageJobs = () => {
 
     useEffect(() => {
         getJobs();
-    }, [jobsData]);
+    }, []);
 
     if (!isLoading) {
         return (

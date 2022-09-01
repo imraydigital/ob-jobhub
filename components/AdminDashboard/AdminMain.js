@@ -15,7 +15,7 @@ const AdminMain = ({routes, switchRoute}) => {
   return (
     <div className={styles.wrapper}>
       {routes.home ? (
-        <HomeDashboard />
+        <HomeDashboard switchRouteHandler={switchRoute}/>
       ) : routes.jobs ? <ManageJobs/> : routes.applications ? <ManageApplications /> : <ViewStats />}
 
     </div>

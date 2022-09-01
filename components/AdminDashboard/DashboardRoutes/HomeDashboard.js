@@ -5,7 +5,7 @@ import layout from './HomeDashboard.module.css';
 //Components
 import Card from '../../../components/utils/Card/Card';
 
-const HomeDashboard = ({handleClick}) => {
+const HomeDashboard = ({switchRouteHandler}) => {
     return (
         <Fragment>
             <h6>Welcome to Orangebox Job Hub Admin Area</h6>

@@ -52,7 +52,7 @@ const Admin = () => {
                     <AdminSidebar switchRoute={setRoutes} />
                 </div>
                 <div className={styles.adminPageRight}>
-                    <AdminMain routes={routes} />
+                    <AdminMain routes={routes} switchRoute={setRoutes} />
                 </div>
             </div>
 
@@ -108,8 +108,6 @@ const Admin = () => {
     } else {
         return <LoadingIcon />
     }
-
-
 }
 
 export default Admin

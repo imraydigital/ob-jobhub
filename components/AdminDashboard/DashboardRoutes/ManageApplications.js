@@ -21,7 +21,7 @@ const Applications = () => {
 
     useEffect(()=>{
         getApplications();
-    },[applicationData]);
+    },[]);
 
     if(!isLoading){
     return (
