@@ -1,7 +1,6 @@
 .wrapper {
     width: 100%;
     height: 100%;
-    padding: 50px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -15,11 +14,13 @@
     max-width: 50%;
     text-align: center;
     font-weight: 900;
+    padding: 20px;
 }
 
 .wrapper h6 {
     color: #E18226;
     font-size: 1rem;
+    padding: 20px;
 }
 
 .container {
@@ -29,5 +30,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 50px 0px;
+    padding: 50px;
 }

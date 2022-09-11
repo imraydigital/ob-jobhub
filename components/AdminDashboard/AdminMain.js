@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 //CSS
 import styles from './AdminMain.module.css';
 //Routes
@@ -10,7 +10,6 @@ import ViewStats from './DashboardRoutes/ViewStats';
 const AdminMain = ({routes, switchRoute}) => {
 
 //Add switch statement
-
 
   return (
     <div className={styles.wrapper}>
