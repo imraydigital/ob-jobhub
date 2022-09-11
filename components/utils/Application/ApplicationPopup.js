@@ -1,5 +1,4 @@
 import React from 'react'
-import JobCard from '../Job/JobCard';
 //CSS
 import styles from './ApplicationPopup.module.css';
 
@@ -9,7 +8,6 @@ const ApplicationPopup = ({data}) => {
             <p>No application data.</p>
         )
     } else {
-        console.log(data)
         return (
             <div className={styles.applicationPopup}>
                 <div className={styles.applicantDetails}>

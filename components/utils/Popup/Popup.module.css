@@ -29,9 +29,18 @@
     padding: 0px 20px;
 }
 
-.popupContainer__body__header>button {
-    padding: 10px;
+.popupContainer__body__header button {
+    height: auto;
+    width: auto;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    transition: all ease-in 300ms;
+    font-weight: 400;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: #00bda6;
+    color: #FFF;
 }
 
 .popupContainer__body__content {

@@ -7,7 +7,7 @@ const Popup = ({component, togglePopup}) => {
     <div className={styles.popupContainer}>
         <div className={styles.popupContainer__body}>
             <div className={styles.popupContainer__body__header}>
-                <button onClick={togglePopup}>X</button>
+                <button onClick={togglePopup}>Close X</button>
             </div>
             <div className={styles.popupContainer__body__content}>
                 {component}
