@@ -5,13 +5,13 @@ import styles from './Card.module.css';
 import CardBanner from './CardBanner';
 import CardInfo from './CardInfo';
 
-const Card = ({ banner, text, image, title, key}) => {
+const Card = ({ banner, text, image, title, key, switchRoute}) => {
   return (
     <div className={styles.card} style={{ backgroundImage: `url(/images/${image})` }} key={key}>
       <div className={styles.card__bg} >
         {banner && <CardBanner text={text} />}
       </div>
-      <CardInfo title={title}/>
+      <CardInfo title={title} switchRoute={switchRoute}/>
     </div>
   )
 }

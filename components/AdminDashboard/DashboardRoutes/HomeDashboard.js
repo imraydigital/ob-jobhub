@@ -12,9 +12,9 @@ const HomeDashboard = ({switchRouteHandler}) => {
             <h1>Dashboard</h1>
             <div className={styles.container}>
                 <div className={layout.cardList}>
-                    <Card  title={'Manage Jobs'} image={'job-advert.jpg'} />
-                    <Card  title={'Manage Applications'} image={'job-cv.jpg'} />
-                    <Card  title={'View Insights'} image={'stats.jpg'} />
+                    <Card  title={'Manage Jobs'} image={'job-advert.jpg'} switchRoute={switchRouteHandler}/>
+                    <Card  title={'Manage Applications'} image={'job-cv.jpg'} switchRoute={switchRouteHandler}/>
+                    <Card  title={'View Insights'} image={'stats.jpg'} switchRoute={switchRouteHandler}/>
                 </div>
             </div>
         </Fragment>

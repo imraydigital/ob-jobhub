@@ -8,12 +8,13 @@ import LoadingIcon from '../../utils/LoadingIcon/LoadingIcon';
 import JobCard from '../../utils/Job/JobCard';
 import Popup from '../../utils/Popup/Popup';
 import JobPopup from '../../utils/Job/JobPopup';
+import ApplicationItem from '../../utils/Application/ApplicationItem';
 
 const ManageJobs = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [jobsData, setJobsData] = useState([]);
-    const [jobsPopupData, setJobsPopupData] = useState({});
+    const [jobId, setJobId] = useState('');
     const [showPopup, setShowPopup] = useState(false)
 
     const getJobs = async () => {
@@ -36,7 +37,7 @@ const ManageJobs = () => {
     if (!isLoading) {
         return (
             <Fragment>
-                { showPopup && <Popup togglePopup={togglePopup} component={<JobPopup data={jobsPopupData}/>} />}
+                { showPopup && <Popup togglePopup={togglePopup} component={<JobPopup jobId={jobId} jobData={jobsData.filter(item => item._id === jobId)}/>} />}
                 <h6>Welcome to Orangebox Job Hub Admin Area</h6>
                 <h1>Manage Jobs</h1>
                 <div className={styles.container}>
@@ -57,7 +58,7 @@ const ManageJobs = () => {
                                     <div className={manageJobStyles.jobDetails__footer}>
                                         <button className={jobCardStyles.edit}>Edit Job</button>
                                         <button onClick={()=>{
-                                            setJobsPopupData(item);
+                                            setJobId(item._id);
                                             togglePopup();
                                         }}>View Applications</button>
                                     </div>
@@ -69,7 +70,15 @@ const ManageJobs = () => {
             </Fragment>
         )
     } else {
-        return <LoadingIcon />
+        return (
+            <Fragment>
+                <h6>Welcome to Orangebox Job Hub Admin Area</h6>
+                <h1>Manage Jobs</h1>
+                <div className={styles.container}>
+                    <LoadingIcon/>
+                </div>
+            </Fragment>
+        )
     }
 }
 
