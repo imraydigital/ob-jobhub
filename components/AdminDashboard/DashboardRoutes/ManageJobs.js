@@ -8,7 +8,7 @@ import LoadingIcon from '../../utils/LoadingIcon/LoadingIcon';
 import JobCard from '../../utils/Job/JobCard';
 import Popup from '../../utils/Popup/Popup';
 import JobPopup from '../../utils/Job/JobPopup';
-import ApplicationItem from '../../utils/Application/ApplicationItem';
+import CreateJobPopup from '../../utils/Job/CreateJobPopup';
 
 const ManageJobs = () => {
 
@@ -16,6 +16,7 @@ const ManageJobs = () => {
     const [jobsData, setJobsData] = useState([]);
     const [jobId, setJobId] = useState('');
     const [showPopup, setShowPopup] = useState(false)
+    const [createMode, setCreateMode] = useState(false)
 
     const getJobs = async () => {
         await fetch('/api/jobs')
@@ -26,8 +27,12 @@ const ManageJobs = () => {
             })
     }
 
-    const togglePopup = () => {
+    const toggleJobPopup = () => {
         setShowPopup(!showPopup);
+    }
+
+    const toggleCreateMode = () => {
+        setCreateMode(!createMode);
     }
 
     useEffect(() => {
@@ -37,14 +42,17 @@ const ManageJobs = () => {
     if (!isLoading) {
         return (
             <Fragment>
-                { showPopup && <Popup togglePopup={togglePopup} component={<JobPopup jobId={jobId} jobData={jobsData.filter(item => item._id === jobId)}/>} />}
+                { showPopup && <Popup togglePopup={toggleJobPopup} component={<JobPopup jobId={jobId} jobData={jobsData.filter(item => item._id === jobId)}/>} />}
+                { createMode && <Popup togglePopup={toggleCreateMode} component={<CreateJobPopup toggleCreateMode={toggleCreateMode}/>} />}
                 <h6>Welcome to Orangebox Job Hub Admin Area</h6>
                 <h1>Manage Jobs</h1>
                 <div className={styles.container}>
                     <div className={jobCardStyles.jobListWrapper}>
                         <JobCard key='createNewJob'>
                             <h6>Create New Job</h6>
-                            <button>
+                            <button onClick={()=>{
+                                toggleCreateMode();
+                            }}>
                                 <Image src={'/images/plus.png'} height='40' width='40' alt='Add'/>
                             </button>
                         </JobCard>
@@ -59,7 +67,7 @@ const ManageJobs = () => {
                                         <button className={jobCardStyles.edit}>Edit Job</button>
                                         <button onClick={()=>{
                                             setJobId(item._id);
-                                            togglePopup();
+                                            toggleJobPopup();
                                         }}>View Applications</button>
                                     </div>
                                 </JobCard>

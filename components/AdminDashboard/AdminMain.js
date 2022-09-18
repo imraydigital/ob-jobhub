@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React from 'react'
 //CSS
 import styles from './AdminMain.module.css';
 //Routes
@@ -8,13 +8,7 @@ import ManageApplications from './DashboardRoutes/ManageApplications';
 import ViewStats from './DashboardRoutes/ViewStats';
 
 
-export const ApplicationsContext = React.createContext()
-
 const AdminMain = ({ routes, switchRoute }) => {
-
-  const [applications, setApplications] = useState([]);
-
-  //Add switch statement??
 
   const getApplicationData = async () => {
       try {

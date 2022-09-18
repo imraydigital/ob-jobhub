@@ -5,3 +5,18 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header>* {
+    text-align: center;
+}
