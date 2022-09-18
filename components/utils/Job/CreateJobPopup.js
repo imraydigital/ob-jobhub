@@ -32,10 +32,17 @@ const CreateJobPopup = ({toggleCreateMode}) => {
                 [e.target.name] : e.target.value
             }
         } else {
+            if(e.target.value == 'Both') {
+                return {
+                    ...prevState,
+                    [e.target.name] : ['AEB', 'SSU']
+                }
+            } else {
             return {
                 ...prevState,
                 [e.target.name] : [e.target.value]
             }
+        }
         }
         });
     }
