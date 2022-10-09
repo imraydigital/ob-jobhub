@@ -9,6 +9,7 @@ import JobCard from '../../utils/Job/JobCard';
 import Popup from '../../utils/Popup/Popup';
 import JobPopup from '../../utils/Job/JobPopup';
 import CreateJobPopup from '../../utils/Job/CreateJobPopup';
+import EditJobPopup from '../../utils/Job/EditJobPopup';
 
 const ManageJobs = () => {
 
@@ -17,6 +18,7 @@ const ManageJobs = () => {
     const [jobId, setJobId] = useState('');
     const [showPopup, setShowPopup] = useState(false)
     const [createMode, setCreateMode] = useState(false)
+    const [editMode, setEditMode] = useState(false)
 
     const getJobs = async () => {
         await fetch('/api/jobs')
@@ -35,15 +37,20 @@ const ManageJobs = () => {
         setCreateMode(!createMode);
     }
 
+    const toggleEditMode = () => {
+        setEditMode(!editMode)
+    }
+
     useEffect(() => {
         getJobs();
-    }, []);
+    }, [jobsData]);
 
     if (!isLoading) {
         return (
             <Fragment>
                 { showPopup && <Popup togglePopup={toggleJobPopup} component={<JobPopup jobId={jobId} jobData={jobsData.filter(item => item._id === jobId)}/>} />}
                 { createMode && <Popup togglePopup={toggleCreateMode} component={<CreateJobPopup toggleCreateMode={toggleCreateMode}/>} />}
+                { editMode && <Popup togglePopup={toggleEditMode} component={<EditJobPopup toggleEditMode={toggleEditMode} jobId={jobId} updateJobsDataState={setJobsData}/>} />}
                 <h6>Welcome to Orangebox Job Hub Admin Area</h6>
                 <h1>Manage Jobs</h1>
                 <div className={styles.container}>
@@ -64,7 +71,10 @@ const ManageJobs = () => {
                                         <p>{`- ${item.location}`}</p>
                                     </div>
                                     <div className={manageJobStyles.jobDetails__footer}>
-                                        <button className={jobCardStyles.edit}>Edit Job</button>
+                                        <button className={jobCardStyles.edit} onClick={()=>{
+                                            setJobId(item._id);
+                                            toggleEditMode();
+                                        }}>Edit Job</button>
                                         <button onClick={()=>{
                                             setJobId(item._id);
                                             toggleJobPopup();

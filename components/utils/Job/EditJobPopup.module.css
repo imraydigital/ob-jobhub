@@ -1,0 +1,74 @@
+.editJobPopupContainer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     width: 100%;
+     background-color: #E3E3E3;
+}
+.editJobPopupContainer > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    overflow: scroll;
+}
+
+.editJobPopupContainer > form > input,
+.editJobPopupContainer > form > textarea
+ {
+    width: 100%;
+    margin: 10px 0px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 400;
+    border-radius: 15px;
+    color: black;
+    min-height: 56px;
+    font-size: 14px;
+}
+
+.editJobPopupContainer > form button {
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 6px 29px;
+
+    border-radius: 5px;
+    background-color: #00bda6;
+    color: #FFF !important;
+    border: none;
+
+    height: 56px;
+    font-size: 17px;
+    width: 25%;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    transition: all ease-in 300ms;
+    font-weight: 400;
+    border-radius: 5px;
+
+}
+
+.editJobPopupContainer > form button:hover {
+    transform: scale(1.05);
+}
+
+.editJobPopupContainer > form button.cancel {
+    background-color: #eee !important ;
+    color: #000 !important;
+}
+
+.editJobPopupContainer > form button.delete {
+    background-color: red !important ;
+    color: #fff !important;
+    justify-self: flex-end;
+}
+
+.editJobPopupContainer__actions {
+    display: flex;
+    gap: 30px;
+}

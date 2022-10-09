@@ -5,7 +5,7 @@ import appStyles from '../../utils/Application/ApplicationItem.module.css';
 import jobPopupStyles from './JobPopup.module.css';
 //Components
 import LoadingIcon from '../LoadingIcon/LoadingIcon';
-import ApplicationItem from '../Application/ApplicationItem';
+import ApplicationPopupItem from '../Application/ApplicationPopupItem';
 
 const JobPopup = ({ jobId, jobData }) => {
 
@@ -35,24 +35,7 @@ const JobPopup = ({ jobId, jobData }) => {
                 </div>
 
                 {applicationsData.map(application => {
-                    return (
-
-                        <ApplicationItem key={application._id}>
-                            <div className={appStyles.applicantContainer}>
-                                <div className={appStyles.applicantContainer__title}>
-                                    <p>Applicant</p>
-                                </div>
-                                <div className={appStyles.applicantContainer__name}>
-                                    <p>{application.firstName}</p>
-                                    <p>{application.lastName}</p>
-                                </div>
-                            </div>
-                            <div className={`${appStyles.applicantContainer__button}`}>
-                                <button onClick={() => {
-                                }}>Show Details</button>
-                            </div>
-                        </ApplicationItem>
-                    )
+                    return <ApplicationPopupItem key={application._id} application={application} />
                 })}
             </div>
         )

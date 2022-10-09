@@ -1,8 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 //CSS
 import styles from './ApplicationPopup.module.css';
 
 const ApplicationPopup = ({data}) => {
+
+    const [jobData, setJobData] = useState({
+        jobTitle: '',
+        location: ''
+    });
+
+    const getJobTitleById = async () => {
+        await fetch(`/api/jobs/getJobTitleById/${data.jobId}`)
+        .then(res => res.json())
+        .then(data => {
+            setJobData(data);
+        })
+    }
+
+    useEffect(()=>{
+        getJobTitleById();
+    },[])
+
     if (!data) {
         return (
             <p>No application data.</p>
@@ -23,7 +41,7 @@ const ApplicationPopup = ({data}) => {
                     <p>Postcode: {data.postcode}</p>
                     <p>Lived in the UK for the past 3 years? {data.livedInUK ? 'Yes' : 'No'}</p>
                     <h3>Application Details</h3>
-                    <p>Applied for: {data.jobId}</p>
+                    <p>Applied for: {`${jobData.jobTitle} - ${jobData.location}`}</p>
                     <p>Currently studying? {data.studying ? 'Yes' : 'No'}</p>
                     <p>Currently unemployed? {data.unemployed ? 'Yes' : 'No'}</p>
                 </div>
