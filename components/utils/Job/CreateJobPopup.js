@@ -58,6 +58,7 @@ const CreateJobPopup = ({ toggleCreateMode }) => {
                     }}>Create Job</button>
                     <button className={styles.cancel} onClick={(e) => {
                         e.preventDefault();
+                        toggleCreateMode();
                     }}>Cancel</button>
                 </div>
             </form >
