@@ -34,7 +34,7 @@ const handler = async (req, res) => {
         );
         const db = client.db();
         const applications = await db.collection('applications').find().toArray();
-        res.json(applications);
+        res.json(applications.reverse());
         client.close();
     }
 

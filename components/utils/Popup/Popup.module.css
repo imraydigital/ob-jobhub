@@ -12,7 +12,7 @@
 }
 
 .popupContainer__body {
-    height: 80vh;
+    max-height: 80vh;
     width: 60vw;
     display: flex;
     flex-direction: column;

@@ -7,7 +7,6 @@ const handler = async (req,res) => {
     );
     const db = client.db();
     const jobData = await db.collection('jobs').findOne({'_id': ObjectId(req.query.jobId)});
-    console.log(jobData);
     client.close();
     return res.json(jobData);
 

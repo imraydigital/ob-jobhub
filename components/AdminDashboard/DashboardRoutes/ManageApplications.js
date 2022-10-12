@@ -32,8 +32,6 @@ const Applications = () => {
         getApplications();
     },[]);
 
-    console.log(showPopup)
-
     if(!isLoading){
     return (
         <Fragment>
