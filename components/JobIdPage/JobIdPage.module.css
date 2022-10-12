@@ -136,5 +136,10 @@
         max-width: 100%;
         text-align: center;
         font-weight: 900;
+        font-size: 2rem;
+    }
+
+    .jobIdPageContainer__main__jobdesc h6 {
+        font-size: 1.5rem;
     }
 }
