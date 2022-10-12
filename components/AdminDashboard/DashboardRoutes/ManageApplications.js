@@ -18,7 +18,6 @@ const Applications = () => {
         await fetch('/api/applications')
             .then(res => res.json())
             .then(data => {
-                data.reverse();
                 setApplicationData(data);
                 setIsLoading(false);
             })
