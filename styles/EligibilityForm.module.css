@@ -55,8 +55,8 @@
 }
 
 .disabled {
-    background-color: #EDF1F2;
-    color: black;
+    background-color: #EDF1F2 !important;
+    color: black !important;
     pointer-events: none;
     animation: eBtnWobble 150ms 3;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 //CSS
 import styles from './JobIdEligibility.module.css';
+import formStyles from '../../styles/EligibilityForm.module.css';
 //Components
 import AEBForm from '../AEBForm';
 import SSUForm from '../SSUForm';
@@ -23,12 +24,13 @@ const JobIdEligibility = ({ job }) => {
         studying: false
     })
 
+    const [applicationSubmitted, setApplicationSubmitted] = useState(false)
+
 
     return (
         <div className={styles.container}>
             <form onSubmit={async (e) => {
                 e.preventDefault();
-                console.log(formData);
                 //Sent POST request to API
                 await fetch('/api/applications', {
                     method: 'POST',
@@ -39,7 +41,10 @@ const JobIdEligibility = ({ job }) => {
                         "Content-type" : "application/json; charset=UTF-8"
                     }
                 }).then(response => response.json())
-                    .then(json => window.alert(json.message));
+                    .then(json => {
+                        window.alert(json.message)
+                        setApplicationSubmitted(true);
+                    });
 
             }}>
                 <div className={styles.splitInput}>
@@ -79,7 +84,7 @@ const JobIdEligibility = ({ job }) => {
                     }} />
                 </div>
                 {job.tags.includes("aeb") && job.tags.includes("ssu") ? <SSUForm handleClick={setFormData} /> : job.tags.includes("aeb") && !job.tags.includes("ssu") ? <AEBForm handleClick={setFormData} /> : <SSUForm handleClick={setFormData} />}
-                <button type="submit">Apply</button>
+                {!applicationSubmitted ? <button type="submit">Apply</button> : <button className={formStyles.disabled}>Application Submitted!</button>}
             </form>
         </div>
     )
