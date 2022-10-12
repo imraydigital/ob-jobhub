@@ -7,7 +7,7 @@ const SSUForm = ({handleClick}) => {
         <>
             <div className={styles.efc__input__date}>
                 <label>Please enter your date of birth</label>
-                <input type="date" name="dob" onChange={(e)=>{
+                <input type="date" name="dob" required onChange={(e)=>{
                             handleClick((prevState)=>{
                                 return {
                                     ...prevState,
@@ -16,7 +16,7 @@ const SSUForm = ({handleClick}) => {
                             })
                     }}/>
             </div>
-            <input type="text" placeholder="Enter postcode" name="postcode" onChange={(e)=>{
+            <input type="text" placeholder="Enter postcode" name="postcode" required onChange={(e)=>{
                             handleClick((prevState)=>{
                                 return {
                                     ...prevState,

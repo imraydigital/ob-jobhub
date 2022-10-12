@@ -66,7 +66,7 @@ const JobIdEligibility = ({ job }) => {
                     }} />
                 </div>
                 <div className={styles.splitInput}>
-                    <input type="email" placeholder="Email address" name="email" onChange={(e) => {
+                    <input type="email" placeholder="Email address" name="email" required onChange={(e) => {
                         setFormData((prevState) => {
                             return {
                                 ...prevState,
@@ -74,7 +74,7 @@ const JobIdEligibility = ({ job }) => {
                             }
                         })
                     }} />
-                    <input type="tel" placeholder="Telephone Number" name="telephone" onChange={(e) => {
+                    <input type="tel" placeholder="Telephone Number" name="telephone" required onChange={(e) => {
                         setFormData((prevState) => {
                             return {
                                 ...prevState,
