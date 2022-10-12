@@ -6,6 +6,7 @@ import LoadingIcon from '../../utils/LoadingIcon/LoadingIcon';
 import ApplicationItem from '../../utils/Application/ApplicationItem';
 import Popup from '../../utils/Popup/Popup';
 import ApplicationPopup from '../../utils/Application/ApplicationPopup';
+import DeletePopup from '../../utils/Application/ApplicationDeletePopup';
 
 const Applications = () => {
 
@@ -13,6 +14,7 @@ const Applications = () => {
     const [applicationData, setApplicationData] = useState([]);
     const [applicationPopupData, setApplicationPopupData] = useState({});
     const [showPopup, setShowPopup] = useState(false);
+    const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const getApplications = async () => {
         await fetch('/api/applications')
@@ -27,14 +29,19 @@ const Applications = () => {
         setShowPopup(!showPopup);
     }
 
+    const toggleDeletePopup = () => {
+        setShowDeletePopup(!showDeletePopup);
+    }
+
     useEffect(()=>{
         getApplications();
-    },[]);
+    },[applicationData]);
 
     if(!isLoading){
     return (
         <Fragment>
             {showPopup && <Popup togglePopup={togglePopup} component={<ApplicationPopup data={applicationPopupData}/>}/>}
+            {showDeletePopup && <Popup togglePopup={toggleDeletePopup} component={<DeletePopup togglePopup={toggleDeletePopup} data={applicationPopupData} updateApplicationsState={setApplicationData}/>}/>}
             <h6>Welcome to Orangebox Job Hub Admin Area</h6>
             <h1>Manage Applications</h1>
             <div className={styles.container}>
@@ -55,6 +62,10 @@ const Applications = () => {
                                         setApplicationPopupData(application);
                                         togglePopup();
                                 }}>View Application</button>
+                                <button className={appStyles.deleteBtn} onClick={()=>{
+                                        setApplicationPopupData(application);
+                                        toggleDeletePopup();
+                                }}>Delete Application</button>
                             </div>
                         </ApplicationItem>
                     )
