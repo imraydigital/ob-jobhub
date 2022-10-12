@@ -37,10 +37,15 @@
     font-weight: 600;
 }
 
+.applicantContainer__button {
+    display: flex;
+    gap: 10px;
+}
+
 .applicantContainer__button>button {
     height: 56px;
     font-size: 14px;
-    width: 100%;
+    width: auto;
     border: none;
     padding: 10px 20px;
     margin: 10px 0px;
@@ -67,4 +72,5 @@
 
 .deleteBtn {
     background-color: red !important;
+    padding: 5px !important;
 }

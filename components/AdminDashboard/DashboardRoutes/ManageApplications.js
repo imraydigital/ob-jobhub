@@ -1,4 +1,5 @@
-import React, {Fragment, useState, useEffect, useContext} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
+import Image from 'next/image'
 import styles from '../AdminMain.module.css';
 import appStyles from '../../utils/Application/ApplicationItem.module.css';
 //Components
@@ -65,7 +66,7 @@ const Applications = () => {
                                 <button className={appStyles.deleteBtn} onClick={()=>{
                                         setApplicationPopupData(application);
                                         toggleDeletePopup();
-                                }}>Delete Application</button>
+                                }}><Image alt='delete-icon' src='/images/trash.png' height={32} width={32}></Image></button>
                             </div>
                         </ApplicationItem>
                     )
