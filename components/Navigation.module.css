@@ -45,3 +45,9 @@
     letter-spacing: .5px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 500px) {
+    .navContainer {
+        padding: 0px 20px;
+    }    
+}
