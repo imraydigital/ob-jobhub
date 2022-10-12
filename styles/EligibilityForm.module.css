@@ -193,3 +193,18 @@
     height: 100%;
 }
 
+@media only screen and (max-width: 500px) {
+    .efc__input__date {
+        flex-direction: column;
+
+    }
+
+    .efc__input__date>input[type="date"]{
+       
+        width: 100%;
+    }
+
+    .efc__input__date label {
+        font-size: 16px;
+    }
+}

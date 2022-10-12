@@ -100,3 +100,41 @@
 .jobIdPageContainer__main__jobdesc p {
     line-height: 1.75;
 }
+
+@media only screen and (max-width: 500px){
+    .jobIdPageContainer__heroTitle {
+        font-size: 2.5rem;
+        justify-content: center;
+    }
+
+
+    .jobIdPageContainer__hero {
+        width: 100%;
+        min-height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url('/images/Orangebox-banner.jpeg');
+        background-size: cover;
+        padding: 30px;
+    }
+
+    .jobIdPageContainer__main {
+        padding: 20px;
+    }
+
+    .jobIdPageContainer__main__jobdesc {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .jobIdPageContainer__main__jobdesc h1 {
+       
+        max-width: 100%;
+        text-align: center;
+        font-weight: 900;
+    }
+}
