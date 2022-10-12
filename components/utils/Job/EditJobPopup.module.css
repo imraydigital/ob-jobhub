@@ -6,6 +6,7 @@
      height: 100%;
      width: 100%;
      background-color: #E3E3E3;
+     margin-top: auto;
 }
 .editJobPopupContainer > form {
     display: flex;
